@@ -4,7 +4,7 @@ import pandas as pd
 
 def pegar_infos(nome_arquivo, valores):
     
-    with open(f'C:\\Users\\crist\\OneDrive\\Área de Trabalho\\pot\\project\\nfs\\{nome_arquivo}', "rb") as arquivo_xml:
+    with open(f'\\project\\nfs\\{nome_arquivo}', "rb") as arquivo_xml:
      
         dic_arquivo = xmltodict.parse(arquivo_xml)
         if "NFe" in dic_arquivo:
@@ -21,7 +21,7 @@ def pegar_infos(nome_arquivo, valores):
             peso = "Peso não informado"
         valores.append([numero_nota, empresa_emissora, nome_cliente, endereço, peso])
      
-lista_arquivos = os.listdir("C:\\Users\\crist\\OneDrive\\Área de Trabalho\\pot\\project\\nfs\\")
+lista_arquivos = os.listdir("\\project\\nfs\\")
 
 colunas = ["numero_nota", "empresa_emissora", "nome_cliente", "endereço", "peso"]
 valores = []
